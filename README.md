@@ -40,7 +40,7 @@ python -m pip install git+https://github.com/NVIDIA/NeMo.git@52d50e9e09a3e636d60
 ### **3.2. Install WhisperX**
 Install WhisperX using its GitHub repository:
 ```bash
-python -m pip install whisperx @ git+https://github.com/m-bain/whisperx.git
+python -m pip install git+https://github.com/m-bain/whisperx.git
 ```
 
 ---
@@ -53,7 +53,7 @@ To install `youtokentome`, follow these steps:
     ```
 2. Install **youtokentome**:
     ```bash
-    pip install youtokentome
+    python -m pip install git+https://github.com/gburlet/YouTokenToMe.git@dependencies
     ```
 
 ---
@@ -77,4 +77,4 @@ from nemo.collections.asr.models import EncDecMultiTaskModel
 ```
 
 ### **Solution:**
-The issue is due to a version conflict in the `nemo-toolkit[all]` package. To resolve this, ensure compatible versions of dependent libraries are installed. Check for updates or compatibility in the `nemo-toolkit` documentation.
+The issue is due to a version conflict in the `huggingface-hub` package. To resolve this, install `huggingface-hub==0.23.2`
