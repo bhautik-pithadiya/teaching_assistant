@@ -1,0 +1,153 @@
+[
+    [
+        {
+            "approach": "normal",
+            "audio_time": "15:44",
+            "convertion_to_list_of_dict": "5:58"
+        },
+        {
+            "approach": "batch_wise",
+            "audio_time": "15:44",
+            "convertion_to_list_of_dict": [
+                {
+                    "batch": "50",
+                    "time": "5:54"
+                },
+                {
+                    "batch": "100",
+                    "time": "5:54"
+                }
+            ]
+        },
+        {
+            "approach": "tensorflow",
+            "audio_time": "15:44",
+            "convertion_to_list_of_dict": "5:48"
+        },
+        {
+            "approach": "numba jit",
+            "audio_time": "15:44",
+            "convertion_to_list_of_dict": "6:15"
+        },
+        {
+            "approach": "njit",
+            "audio_time": "15:44",
+            "convertion_to_list_of_dict": ""
+        },
+        {
+            "approach": "Multithreading - Thread Pool",
+            "audio_time": "15:44",
+            "convertion_to_list_of_dict": "6:06"
+        },
+        {
+            "approach": "ProcessPoolExecutor",
+            "audio_time": "15:44",
+            "convertion_to_list_of_dict": "6:08"
+        },
+        {
+            "approach": "onGpu",
+            "audio_time": "15:44",
+            "convertion_to_list_of_dict": "3:30"
+        }
+    ],
+    [
+        {
+            "approach": "onCPU",
+            "audioLength": "15:44",
+            "numberOfCoresSet": 8,
+            "timeTaken": "0:11:18.298541"
+        },
+        {
+            "approach": "onCPU",
+            "audioLength": "15:44",
+            "numberOfCoresSet": 12,
+            "timeTaken": "0:11:27.509979"
+        },
+        {
+            "approach": "onCPU",
+            "audioLength": "15:44",
+            "numberOfCoresSet": 6,
+            "timeTaken": "0:11:10.050305"
+        },
+        {
+            "approach": "onCPU, int8",
+            "audioLength": "15:44",
+            "numberOfCoresSet": 8,
+            "timeTaken": "0:09:54.939293"
+        },
+        {
+            "approach": "onCPU, int8",
+            "audioLength": "15:44",
+            "numberOfCoresSet": 6,
+            "timeTaken": "0:09:37.774846"
+        },
+        {
+            "approach": "onCPU, int8",
+            "audioLength": "15:44",
+            "numberOfCoresSet": "auto",
+            "timeTaken": "0:10:00.132016"
+        },
+        {
+            "approach": "onCPU, int8",
+            "audioLength": "15:44",
+            "numberOfCoresSet": 5,
+            "timeTaken": "0:09:43.822132"
+        },
+
+
+        
+    ],
+    [
+        {
+            "approach": "diarize_parallel, int_16",
+            "audioLength": "15:44",
+            "numberOfCoresSet": 8,
+            "timeTaken": "0:10:00.587310"
+        },
+        {
+            "approach": "diarize_parallel, int_8",
+            "audioLength": "15:44",
+            "numberOfCoresSet": 8,
+            "timeTaken": "0:08:33.698932"
+        },
+        {
+            "approach": "diarize_parallel, int_8",
+            "audioLength": "15:44",
+            "numberOfCoresSet": 6,
+            "timeTaken": "0:08:25.182581"
+        },
+        {
+            "approach": "diarize_parallel, int_8",
+            "audioLength": "15:44",
+            "numberOfCoresSet": "auto",
+            "timeTaken": "0:08:29.437757"
+        },
+        {
+            "approach": "diarize_parallel, int_8",
+            "audioLength": "15:44",
+            "numberOfCoresSet": "4",
+            "timeTaken": "0:08:29.283485"
+        },
+        {
+            "approach": "diarize_parallel, int_8, whispermodel_in_gpu",
+            "audioLength": "15:44",
+            "numberOfCoresSet": "6",
+            "timeTaken": "0:04:19.277708"
+        },
+    ],
+    [
+        {
+            "approach": "diarize_parallel, int_8, whispermodel_in_gpu",
+            "audioLength": "15:44",
+            "numberOfCoresSet": {"nemo": 8 },
+            "timeTakenSD": "0:03:09.865986"
+        },
+        {
+            "approach": "diarize_parallel, int_8, nemo_with_gpu",
+            "audioLength": "15:44",
+            "numberOfCoresSet": { "whisper": 6 },
+            "timeTakenSD": "0:01:51.214505"
+        }
+        
+    ]
+]

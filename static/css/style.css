@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.main_container {
+    display: flex;
+    margin: 0;
+    border: 0;
+}
+
+/* .sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    overflow: scroll;
+    
+}
+
+.sidebar h1 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar ul li:hover {
+    background-color: #444;
+}
+
+.new-chat-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+.new-chat-button:hover {
+    background-color: #4cae4c;
+}
+
+#id-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#id-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+    color: #fff;
+}
+
+#id-list li:hover {
+    background-color: #444;
+} */
+/* Existing CSS for sidebar */
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    overflow: scroll;
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform: translateX(0); /* Default position */
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%); /* Hide sidebar */
+}
+
+.sidebar h1 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar ul li:hover {
+    background-color: #444;
+}
+
+#id-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#id-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+    color: #fff;
+}
+
+#id-list li:hover {
+    background-color: #444;
+}
+
+/* Styles for the toggle button */
+.toggle-button {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+    color: #4cae4c;
+    position: fixed;
+    top: 6px;
+    left: 1px;
+    z-index: 1000;
+}
+
+.new-chat-button{
+    width: 91%;
+
+}
+
+.form_data {
+    width: 30%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+textarea, input[type="text"], input[type="file"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea:read-only {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+button {
+    width: 30%;
+    padding: 10px;
+    background-color: #4cae4c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+
+
+.display-container {
+    margin-top: 20px;
+}
+
+.display-container img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+#more-button {
+    background-color: #4cae4c;
+    width: 92px;
+    display: flex;
+    justify-content: center;
+    
+}
+.itt-more-btn{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-header {
+    text-align: center;
+}
+
+#audioUploadForm {
+    text-align: center;
+}
+
+.audio-center{
+    text-align: center;
+}
+
+
+
+.radio-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.radio-buttons input[type="radio"] {
+    margin-right: 5px;
+    
+    
+    margin-bottom: 6px;
+    height: 18px;
+    width: 21px;
+}
+
+.itt-btn{
+    text-align: center;
+}

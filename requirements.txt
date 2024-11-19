@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+pydub
+hydra-core
+inflect
+webdataset
+pybind11
+wheel 
+setuptools 
+fasttext
+contractions
+datasets
+nemo_toolkit[all]==1.21   
+huggingface-hub
+multipart
+ffmpeg
+accelerate

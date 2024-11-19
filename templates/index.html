@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Upload Form</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="main_container">
+        <div class="sidebar" id="sidebar">
+            <h1>History</h1>
+            <button id="new-chat" class="new-chat-button">New Chat</button>
+            <ul id="id-list">
+                <!-- List of IDs will appear here -->
+            </ul>
+            
+        </div>
+        <div class="toggle-button" id="toggle-button">☰</div>
+        <div class="form_data">
+            <!-- Audio Upload Form -->
+            <div class="audioform">
+                <h2 class="form-header">Audio Upload Form</h2>
+                <form id="audioUploadForm" method="post" enctype="multipart/form-data">
+                    <label for="audioFile">
+                        Select an audio file (MP3 or WAV):
+                    </label>
+
+                    <input type="file" name="audioFile" id="audioFile" accept=".mp3, .wav" required>
+                    <br>
+                    <button type="submit" value="Upload">Upload</button>
+                </form>
+            </div>
+            <div class="result_container" style="display: none;">
+                <h1>Result</h1>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/script.js"></script>
+</body>
+</html>
