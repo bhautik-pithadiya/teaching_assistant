@@ -1,4 +1,4 @@
-fastapi
+fastapi[standard]
 uvicorn
 pydub
 hydra-core
@@ -15,4 +15,7 @@ huggingface-hub==0.23.2
 multipart
 ffmpeg
 accelerate
+lhoste
 deepmultilingualpunctuation
+langchain_openai
+langchain

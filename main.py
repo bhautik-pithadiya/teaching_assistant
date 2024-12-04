@@ -8,8 +8,12 @@ from fastapi import HTTPException
 from pathlib import Path
 import logging
 from datetime import datetime
+# from summary_sentiment import summarize,sentiment
+from summary_sentiment.summarize import summarize
 import uuid, os
 import shutil
+import time
+from datetime import timedelta
 from src import diarize
 from src import *
 import json
@@ -46,11 +50,11 @@ whisper_model, msdd_model, punct_model = diarize.init_models()
 
 # logger.info("            Loading Summarization Model")
 # summ_model = summarize.Model(model_dict = "summary_sentiment/MEETING-SUMMARY-BART-LARGE-XSUM-SAMSUM-DIALOGSUM-AMI")
-# # summ_model = summarize.Model()
+# summ_model = summarize.Model()
 
 # logger.info("            Loading Sentiment Model")
 # sentiToken, sentiModel = sentiment.load_sentiment_model()
-# logger.info("            Model Loading Complete")
+logger.info("            Model Loading Complete")
 
 json_file_path = "static/data/results/result.json"
 
@@ -83,6 +87,9 @@ async def get_audio(id):
         return JSONResponse(content={"error": "File not found"}, status_code=404)
 @app.post("/")
 def form_post(audioFile: UploadFile = File(...)):
+    india_timezone = pytz.timezone('Asia/Kolkata')
+    utc_now = datetime.now(pytz.utc)
+    startTime = time.time()
     unique_id = str(uuid.uuid4())
     destination_path  = f'static/data/audios/{unique_id}.wav'
     try:
@@ -96,18 +103,18 @@ def form_post(audioFile: UploadFile = File(...)):
                 # saving to data/audios/....wav
                 shutil.copyfile(temp.name, destination_path) 
             
-            # logger.info("            Now Summarizing Convesations")
-            # text = summ_model.clean_text(transcript)
+            logger.info("            Now Summarizing Convesations")
+            # text = transcript
             
-            # generated_summary = summ_model.summary(text)
+            generated_summary =summarize(transcript)
             
-            # if generated_summary!="":
-            #     logger.info("            Summary Generated.")
+            if generated_summary!="":
+                logger.info("            Summary Generated.")
                 
             # logger.info("            Sentiment Analysis")
             
             # generated_sentiment = sentiment.inference(generated_summary,sentiToken,sentiModel)
-            # logger.info("            Analysis Done.")
+            logger.info("            Analysis Done.")
             try:
                 with open(json_file_path, 'r') as file:
                     try:
@@ -117,14 +124,14 @@ def form_post(audioFile: UploadFile = File(...)):
             except FileNotFoundError:
                 chat_history = []
             
-            india_timezone = pytz.timezone('Asia/Kolkata')
-            utc_now = datetime.now(pytz.utc)
-            current_time = utc_now.astimezone(india_timezone)
+            endTime = time.time()
+            currentTime = utc_now.astimezone(india_timezone)
             response = {"id" :unique_id,
                         'Transcript': transcript,
-                        # "Summary":generated_summary,
+                        "Summary":generated_summary,
                         # 'Sentiment':generated_sentiment,
-                       "DateTime": current_time.strftime('%Y-%m-%d %H:%M:%S') }
+                        "TimeTaken":str(timedelta(seconds=endTime - startTime)),
+                       "DateTime": currentTime.strftime('%Y-%m-%d %H:%M:%S') }
             
             chat_history.insert(0,response)
             

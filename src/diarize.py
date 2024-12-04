@@ -37,7 +37,7 @@ logger = logging.getLogger(__name__)
 enable_stemming = False
 
 # (choose from 'tiny.en', 'tiny', 'base.en', 'base', 'small.en', 'small', 'medium.en', 'medium', 'large-v1', 'large-v2', 'large')
-whisper_model_name = "medium.en"
+whisper_model_name = "medium"
 
 # replaces numerical digits with their pronounciation, increases diarization accuracy 
 suppress_numerals = False 

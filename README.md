@@ -33,8 +33,9 @@ pip install --upgrade pip
 ## **3. Install Required Packages**
 ### **3.1. Install NeMo Toolkit**
 Install a specific version of the NVIDIA NeMo toolkit:
+<!-- python -m pip install git+https://github.com/NVIDIA/NeMo.git@52d50e9e09a3e636d60535fd9882f3b3f32f92ad -->
 ```bash
-python -m pip install git+https://github.com/NVIDIA/NeMo.git@52d50e9e09a3e636d60535fd9882f3b3f32f92ad
+python -m pip install git+https://github.com/NVIDIA/NeMo.git
 ```
 
 ### **3.2. Install WhisperX**
@@ -62,6 +63,12 @@ To install `youtokentome`, follow these steps:
 Install all other dependencies from the `requirements.txt` file:
 ```bash
 pip install -r requirements.txt
+```
+
+## **6. Install ffmeg to you device**
+```bash
+sudo apt update 
+sudp apt install ffmpeg
 ```
 
 ---

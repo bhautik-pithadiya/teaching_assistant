@@ -1,1 +1,2 @@
-{"audio_filepath": "/home/ubuntu/speech-to-text/temp_outputs/mono_file.wav", "duration": 45.504, "label": "infer", "text": "_", "offset": 0}
+{"audio_filepath": "/home/hlink/Documents/Bhautik/teaching_assistant/temp_outputs/mono_file.wav", "duration": 50, "label": "infer", "text": "_", "offset": 0}
+{"audio_filepath": "/home/hlink/Documents/Bhautik/teaching_assistant/temp_outputs/mono_file.wav", "duration": 10.203375000000003, "label": "infer", "text": "_", "offset": 49.85}
